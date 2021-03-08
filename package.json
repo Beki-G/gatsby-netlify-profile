@@ -1,11 +1,10 @@
 {
-  "name": "gatsby-starter-blog",
-  "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "name": "gatsby-netilfy-blog",
+  "description": "Beki's Profile & Blog site",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Beki Gonzalez",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/Beki-G/gatsby-netlify-blog/issues"
   },
   "dependencies": {
     "@styled-icons/fa-solid": "^10.26.0",
@@ -52,15 +51,16 @@
     "prettier": "2.2.1",
     "tailwindcss": "^2.0.3"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "netlify"
   ],
   "license": "0BSD",
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "https://github.com/Beki-G/gatsby-netlify-blog.git"
   },
   "scripts": {
     "build": "gatsby build",
