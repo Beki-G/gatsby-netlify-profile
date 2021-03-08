@@ -23,7 +23,7 @@ const Layout = ({ location, title, children }) => {
   }
 
   return (
-    <div className="w-4/5 mx-auto min-h-9/10 p-3 rounded-md text-aquamarine" data-is-root-path={isRootPath}>
+    <div className="w-4/5 mx-auto min-h-full p-3 rounded-md text-aquamarine" data-is-root-path={isRootPath}>
       <div className="md:w-11/12 mx-auto mb-4 flex justify-between mt-8  bg-eagleGreen p-4 rounded-md">
         <header className="text-2xl font-semibold align-text-top tracking-wide">{header}</header>
         <Search indices={searchIndices} />

@@ -5,7 +5,7 @@ module.exports = {
     title: `Beki's Blog`,
     author: {
       name: `Beki Gonzalez`,
-      summary: `whose curious mind lets her wander a bit further.`,
+      summary: `a tech blogger from the Pacfic Northwest.`,
     },
     description: `A tech blog written for coders beginning their journey in the tech world.`,
     siteUrl: `https://www.bekigonzalez.dev`,

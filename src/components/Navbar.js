@@ -7,7 +7,7 @@ const Navbar = () => {
   useEffect(() => {
     const url = typeof window !== 'undefined' ? window.location.href: ""
 
-    if(url.includes("blog") || url.includes("projects")) setNavBg({bg:"transparent"})
+    if(url!==(window.location.origin+"/")) setNavBg({bg:"transparent"})
     else setNavBg({bg:"white"})
 
   }, [])

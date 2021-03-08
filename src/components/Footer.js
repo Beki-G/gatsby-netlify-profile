@@ -1,13 +1,15 @@
-import React from "react";
+import React from "react"
 
 function Footer() {
   return (
     <footer className="flex flex-col absolute w-full   bg-lgCyan ">
       <div className=" flex justify-center items-center border-t-2 bg-eagleGreen text-aquamarine">
-      © {new Date().getFullYear()}, Built with
-      &#160;
-        <a href="https://www.gatsbyjs.com">Gatsby </a>&#32;
-        Check me out on social media! &#160;
+        <p>
+          &#169; {new Date().getFullYear()}, Built with
+          <a className="ml-1" href="https://www.gatsbyjs.com">Gatsby. </a>&#32; Check me out on
+          social media! &#160;
+        </p>
+
         {/* <span className="bg-aquamarine hover:text-slateGray">
           <a
             href="https://www.linkedin.com/in/rebeca-gonzalez/"
@@ -27,7 +29,8 @@ function Footer() {
         <a
           href="https://twitter.com/bekigonzalez4"
           className="text-aquamarine hover:text-slateGray m-2  "
-          target="_blank" rel="noopener noreferrer"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <svg style={{ width: "24px", height: "24px" }} viewBox="0 0 24 24">
             <path
@@ -39,7 +42,8 @@ function Footer() {
         <a
           href="https://github.com/Beki-G"
           className="text-aquamarine hover:text-slateGray  m-2"
-          target="_blank" rel="noopener noreferrer"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <svg style={{ width: "24px", height: "24px" }} viewBox="0 0 24 24">
             <path
@@ -50,7 +54,7 @@ function Footer() {
         </a>
       </div>
     </footer>
-  );
+  )
 }
 
-export default Footer;
+export default Footer
