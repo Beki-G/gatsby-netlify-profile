@@ -1,14 +1,17 @@
+require("dotenv").config()
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Beki's Blog`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Beki Gonzalez`,
+      summary: `whose curious mind lets her wander a bit further.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `A tech blog written for coders beginning their journey in the tech world.`,
+    siteUrl: `https://www.bekigonzalez.dev`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `bekigonzalez4`,
+      linkedIn: `rebeca-gonzalez`
     },
   },
   plugins: [
@@ -112,8 +115,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Beki's Blog`,
+        short_name: `Beki's Blog`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
@@ -122,9 +125,32 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-react-helmet-canonical-urls`,
+      options: {
+        siteUrl: `https://www.bekigonzalez.dev`,
+      },
+    },
     `gatsby-plugin-gatsby-cloud`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-algolia`,
+      options: {
+        appId: process.env.GATSBY_ALGOLIA_APP_ID,
+        apiKey: process.env.ALGOLIA_ADMIN_KEY,
+        queries: require("./src/utils/algolia-queries")
+      },
+    },
+    {
+      resolve: "gatsby-plugin-netlify-cms",
+      options: {
+        modulePath: `${__dirname}/cms.js`,
+      },
+    },
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-netlify-cms`,
+    'gatsby-plugin-postcss'
   ],
 }

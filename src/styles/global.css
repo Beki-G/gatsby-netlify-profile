@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+
+
+article p {
+    @apply mb-4;
+}
+article code {
+    @apply my-4;
+}
+
+article ul {
+    @apply list-disc list-inside mb-4;
+
+}
+
+article ol {
+    @apply list-decimal list-inside mb-4;
+}
+
+article table {
+    @apply table-auto mb-2 w-full;
+    @apply border-black border-2;
+}
+
+article table tr:nth-child(odd){
+    @apply bg-gray-100;
+}
+
+article table th {
+    @apply text-center bg-white;
+    @apply border-gray-500 border-b-2 ;
+}
+article em {
+    @apply italic;
+}
+article a {
+    @apply underline text-blue-600;
+}
+
+article h1 {
+    @apply text-3xl mb-2 font-medium;
+}
+article h2 {
+    @apply text-2xl mb-2 font-medium;
+}
+
+article h3 {
+    @apply text-xl mb-2 font-medium;
+}
+
+article h4 {
+    @apply text-lg mb-2 font-medium;
+}
+
+article h5{
+    @apply text-base mb-2 font-medium;
+}
+article h6{
+    @apply text-base mb-2 font-medium italic;
+}
+
+
+blockquote {
+    @apply bg-gray-200 rounded-md p-4 italic;
+    @apply border-gray-500 border-l-8 mb-2;
+    
+
+}
+
+/* blockquote p {
+    @apply ;
+} */
+
+@tailwind utilities;
