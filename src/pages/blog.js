@@ -1,7 +1,6 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Navbar from "../components/Navbar"
@@ -13,11 +12,18 @@ const BlogIndex = ({ data, location }) => {
 
   if (posts.length === 0) {
     return (
-      <Layout location={location} title={siteTitle}>
-        <SEO title="All posts" />
-        <Bio />
-        <p>No blog posts found. Come back soon!.</p>
-      </Layout>
+      <div>
+        <Navbar />
+        <Layout location={location} title={siteTitle}>
+          <SEO title="All posts" />
+          <div className="w-5/6 mx-auto bg-eagleGreen rounded-md p-3 ring-4 ring-aquamarine">
+            <p className="mb-6 text-center">
+              No blog posts found. Come back soon!.
+            </p>
+          </div>
+        </Layout>
+        <Footer />
+      </div>
     )
   }
 
@@ -27,9 +33,7 @@ const BlogIndex = ({ data, location }) => {
         <Navbar />
         <Layout location={location} title={siteTitle}>
           <SEO title="All posts" />
-          {/* <Bio /> */}
           <div className="md:w-11/12 mx-auto">
-            {/* <div>hello</div> */}
             <ol style={{ listStyle: `none` }} className="">
               {posts.map(post => {
                 const title = post.frontmatter.title || post.fields.slug
@@ -54,7 +58,10 @@ const BlogIndex = ({ data, location }) => {
                               {title}
                             </span>
                           </Link>{" "}
-                          &#8226; <small className="text-sm text-center text-gray-600">{post.frontmatter.date}</small>
+                          &#8226;{" "}
+                          <small className="text-sm text-center text-gray-600">
+                            {post.frontmatter.date}
+                          </small>
                         </h2>
                       </header>
                       <section>
@@ -73,7 +80,6 @@ const BlogIndex = ({ data, location }) => {
             </ol>
           </div>
         </Layout>
-        {/* <Footer /> */}
       </div>
       <Footer />
     </div>
